@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1CE89D28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE89B28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld */; };
+		0B1CE8A028C20B2C00B2DFDD /* Name+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE89E28C20B2C00B2DFDD /* Name+CoreDataClass.swift */; };
+		0B1CE8A128C20B2C00B2DFDD /* Name+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE89F28C20B2C00B2DFDD /* Name+CoreDataProperties.swift */; };
+		0B1CE8A228C20CF700B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE89B28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld */; };
+		0B1CE8A328C20CF800B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE89B28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld */; };
+		0B1CE8A528C20EB800B2DFDD /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE8A428C20EB800B2DFDD /* CellContent.swift */; };
 		0B66CB0428BE73B9006136F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66CB0328BE73B9006136F5 /* AppDelegate.swift */; };
 		0B66CB0628BE73B9006136F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66CB0528BE73B9006136F5 /* SceneDelegate.swift */; };
 		0B66CB0828BE73B9006136F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66CB0728BE73B9006136F5 /* ViewController.swift */; };
@@ -20,7 +26,6 @@
 		0B66CB3728BE8725006136F5 /* CellNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66CB3628BE8725006136F5 /* CellNameViewController.swift */; };
 		0B66CB3928BE9BA4006136F5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66CB3828BE9BA4006136F5 /* CollectionViewController.swift */; };
 		0BE5757F28BF1FAF0016FDE8 /* CollectionCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE5757E28BF1FAF0016FDE8 /* CollectionCellCollectionViewCell.swift */; };
-		0BE5758128BF22350016FDE8 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE5758028BF22350016FDE8 /* CellContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1CE89C28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UITableView&UIConstraintView.xcdatamodel"; sourceTree = "<group>"; };
+		0B1CE89E28C20B2C00B2DFDD /* Name+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Name+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0B1CE89F28C20B2C00B2DFDD /* Name+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Name+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B1CE8A428C20EB800B2DFDD /* CellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		0B66CB0028BE73B9006136F5 /* UITableView&UICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView&UICollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B66CB0328BE73B9006136F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B66CB0528BE73B9006136F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +67,6 @@
 		0B66CB3628BE8725006136F5 /* CellNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNameViewController.swift; sourceTree = "<group>"; };
 		0B66CB3828BE9BA4006136F5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0BE5757E28BF1FAF0016FDE8 /* CollectionCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		0BE5758028BF22350016FDE8 /* CellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 		0B66CB0228BE73B9006136F5 /* UITableView&UIConstraintView */ = {
 			isa = PBXGroup;
 			children = (
+				0B1CE89E28C20B2C00B2DFDD /* Name+CoreDataClass.swift */,
+				0B1CE89F28C20B2C00B2DFDD /* Name+CoreDataProperties.swift */,
 				0B66CB0328BE73B9006136F5 /* AppDelegate.swift */,
 				0B66CB0528BE73B9006136F5 /* SceneDelegate.swift */,
 				0BE5758228BF22890016FDE8 /* Model */,
@@ -117,6 +127,7 @@
 				0B66CB0C28BE73BB006136F5 /* Assets.xcassets */,
 				0B66CB0E28BE73BB006136F5 /* LaunchScreen.storyboard */,
 				0B66CB1128BE73BB006136F5 /* Info.plist */,
+				0B1CE89B28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld */,
 			);
 			path = "UITableView&UIConstraintView";
 			sourceTree = "<group>";
@@ -153,7 +164,7 @@
 		0BE5758228BF22890016FDE8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BE5758028BF22350016FDE8 /* CellContent.swift */,
+				0B1CE8A428C20EB800B2DFDD /* CellContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,13 +309,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B66CB0828BE73B9006136F5 /* ViewController.swift in Sources */,
+				0B1CE89D28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */,
+				0B1CE8A028C20B2C00B2DFDD /* Name+CoreDataClass.swift in Sources */,
+				0B1CE8A528C20EB800B2DFDD /* CellContent.swift in Sources */,
 				0B66CB0428BE73B9006136F5 /* AppDelegate.swift in Sources */,
 				0B66CB0628BE73B9006136F5 /* SceneDelegate.swift in Sources */,
 				0BE5757F28BF1FAF0016FDE8 /* CollectionCellCollectionViewCell.swift in Sources */,
 				0B66CB3928BE9BA4006136F5 /* CollectionViewController.swift in Sources */,
 				0B66CB3428BE7CE6006136F5 /* TableViewController.swift in Sources */,
 				0B66CB3728BE8725006136F5 /* CellNameViewController.swift in Sources */,
-				0BE5758128BF22350016FDE8 /* CellContent.swift in Sources */,
+				0B1CE8A128C20B2C00B2DFDD /* Name+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1CE8A228C20CF700B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */,
 				0B66CB1B28BE73BC006136F5 /* UITableView_UIConstraintViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B66CB2728BE73BC006136F5 /* UITableView_UICollectionViewUITestsLaunchTests.swift in Sources */,
+				0B1CE8A328C20CF800B2DFDD /* UITableView&UIConstraintView.xcdatamodeld in Sources */,
 				0B66CB2528BE73BC006136F5 /* UITableView_UICollectionViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +664,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B1CE89B28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B1CE89C28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodel */,
+			);
+			currentVersion = 0B1CE89C28C20A8A00B2DFDD /* UITableView&UIConstraintView.xcdatamodel */;
+			path = "UITableView&UIConstraintView.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B66CAF828BE73B9006136F5 /* Project object */;
 }

@@ -19,7 +19,6 @@ class ViewController: UIViewController{
     }
     @IBAction func tableViewButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToTableView", sender: self)
-        
     }
 }
 

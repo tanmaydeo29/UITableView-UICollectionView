@@ -11,12 +11,15 @@ class TableViewController: UIViewController {
     
     let cellVC = CellNameViewController()
     
-    var array = ["Name 1" , "Name 2" , "Name 3" , "Name 4" , "Name 5" , "Name 6" , "Name 7"]
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var items = [Name]()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAllItems()
+        tableView.reloadData()
         
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .add , target: self, action: #selector(insert)) ,
                                               UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(remove))]
@@ -32,9 +35,11 @@ class TableViewController: UIViewController {
         toAdd.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
             let tfs = toAdd.textFields
             let name = tfs?[0]
-            self.array.insert(name!.text  ?? "Not Found", at: self.array.count)
-            self.tableView.reloadData()
+            if(name!.text != ""){
+                self.addItems(itemName: name!.text!)
+            }
         }))
+        toAdd.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         present(toAdd, animated: true)
     }
     
@@ -44,31 +49,69 @@ class TableViewController: UIViewController {
             print("Cancel")
         }))
         toRemove.addAction(UIAlertAction(title: "YES", style: .destructive , handler: {_ in
-            self.array.remove(at: self.array.count - 1)
+            let lastItem = self.items[self.items.count - 1]
+            self.deleteItems(name : lastItem)
             self.tableView.reloadData()
         }))
-        present(toRemove, animated: true)
+        if(items.count >= 1){
+            present(toRemove, animated: true)
+        }
+    }
+    
+    func getAllItems(){
+        do{
+            items = try context.fetch(Name.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        catch{
+            print("Error occured")
+        }
+        
+    }
+
+    func addItems(itemName : String){
+        let newItem = Name(context: context)
+        newItem.name = itemName
+        do{
+            try context.save()
+            getAllItems()
+            print("Item Added")
+        }
+        catch{
+            print("Not saved")
+        }
+    }
+
+    func deleteItems(name : Name){
+        context.delete(name)
+        do{
+            try context.save()
+            getAllItems()
+            print("Item Deleted")
+        }
+        catch{
+            print("Not saved")
+        }
     }
 }
 
 extension TableViewController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row]
+        cell.textLabel?.text = items[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: "CellNameViewController") as! CellNameViewController
-        destinationVC.cellName = array[indexPath.row]
+        destinationVC.cellName = items[indexPath.row].name!
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
-    
-    
 }
 

@@ -2,7 +2,7 @@
 //  CellContent.swift
 //  UITableView&UICollectionView
 //
-//  Created by Tanmay Deo on 31/08/22.
+//  Created by Tanmay Deo on 02/09/22.
 //
 
 import Foundation
